@@ -30,7 +30,7 @@ const appendFirstToLast = (arr) => arr.push(arr[0]);
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
 
-Write a function that accepts an object and an integer as arguments and adds a new property to the object called yearBorn. The value of the yearBorn property should be the integer that was passed in. 
+Write a function that accepts an object and an integer as arguments and adds a new property to the object called yearBorn. The value of the yearBorn property should be the integer that was passed in.
 
 The change should be reflected in the source object that was passed in to the function. That is, the function should modify the object 'in place'.
 
@@ -44,7 +44,7 @@ console.log(a) prints { fullName: 'Octavia Estelle Butler', yearBorn: 1947 }
 
 
 const addBirthYearProperty = (obj, year) => obj.yearBorn = year;
-  
+
 
 
 /* ------------------------------------------------------------------------------------------------
@@ -62,10 +62,10 @@ console.log(people[1].isAuthor) prints true
 
 const setStatusAsAuthor = (peopleArray) => {
 
- peopleArray.forEach( (person) => {
-   person.isAuthor = true;
- })
-}
+  peopleArray.forEach( (person) => {
+    person.isAuthor = true;
+  });
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
@@ -84,7 +84,7 @@ console.log(a) prints [1, 2, 3, 4]
 
 const append = (arr1, arr2) => {
   arr2.forEach( (val) => arr1.push(val));
-}
+};
 
 /* ------------------------------------------------------------------------------------------------
 TESTS
@@ -118,7 +118,7 @@ describe('Testing challenge 2', () => {
 
 describe('Testing challenge 3', () => {
   test('It should add a property to an object', () => {
-    const a = { fullName: 'Octavia Butler' };
+    const a = { fullName: 'Octavia Butler', };
     addBirthYearProperty(a, 1947);
 
     expect(a.yearBorn).toStrictEqual(1947);
@@ -127,7 +127,7 @@ describe('Testing challenge 3', () => {
 
 describe('Testing challenge 4', () => {
   test('It should add a property to every object in an array', () => {
-    const a = [{ fullName: 'Octavia Butler' }, { fullName: 'Ray Bradbury' }, { fullName: 'Kurt Vonnegut' }];
+    const a = [{ fullName: 'Octavia Butler', }, { fullName: 'Ray Bradbury', }, { fullName: 'Kurt Vonnegut', }];
     setStatusAsAuthor(a);
 
     expect(a[0].isAuthor).toStrictEqual(true);
